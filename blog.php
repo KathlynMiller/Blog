@@ -1,5 +1,17 @@
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+   
+	<title>blog</title>
+</head>
+<body>
 
-echo "running my blog"
 
-?>
+
+    <?php
+
+     require_once(__DIR__ . "/controller/create-db.php");
+
+    ?>
+</body>
+</html>
