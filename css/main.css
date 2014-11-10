@@ -1,13 +1,14 @@
-body {
+body,html {
 	background-color:pink;
 }
 
-@media screen and (max-width:320px) {
-	html { background-color: green;}
+@media screen and (max-width:1024px) {    /*for ipad*/
+	html{ background-color: red; }
 }
- 
 
-
+@media screen and (max-width:320px) {    /*Iphone 5*/
+	html{ background-color: red; }
+}
 	
 
 
