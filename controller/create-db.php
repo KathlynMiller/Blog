@@ -24,7 +24,7 @@ require_once(__DIR__ . "/../model/database.php");
     	echo "<p>Database already exists.</p>"; /*paragraph tags in echo */
     }
 
-    $query = $connection->query("CREATE TABLE posts(" /* creating table posts in query variable*/
+    $query = $connection->query("CREATE TABLE posts(" /* creating table posts in query variable                                                                                                                      i*/
       . "id int(11) NOT NULL AUTO_INCREMENT," 
       . "title varchar(255) NOT NULL," 
       . "post text NOT NULL,"
