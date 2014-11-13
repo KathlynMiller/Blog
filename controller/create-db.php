@@ -1,7 +1,7 @@
 <?php
 require_once(__DIR__ . "/../model/database.php");
 
-   $connection = new mysqli($host, $username, $password); /*putting in database code*/
+   $connection = new mysqli($host, $username, $password, $database); /*putting in database code*/
 
    if($connection->connect_error) {
 

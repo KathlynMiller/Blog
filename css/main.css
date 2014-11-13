@@ -1,13 +1,13 @@
-body,html {
-	background-color:pink;
+body {
+	background-color:pink;    /*backgrpund is pink for my blog*/
 }
 
-@media screen and (max-width:1024px) {    /*for ipad*/
-	html{ background-color: red; }
+@media screen and (min-width:1024px) {    /* media query min width on for ipad is 1024px*/
+	html{ background-color: purple; }     /*background color for ipad is purple */
 }
 
-@media screen and (max-width:320px) {    /*Iphone 5*/
-	html{ background-color: red; }
+@media screen and (max-width:320px) {    /* media query max width on iphone 5 is 320px*/
+	html{ background-color: red; }       /*background color for ipad is red */
 }
 	
 

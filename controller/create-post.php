@@ -1,13 +1,19 @@
 <?php
-require_once(__DIR__ . "/../model/database.php");
+require_once(__DIR__ . "/../model/database.php"); 
 
-$connection = new mysqli($host, $username, $passowrd, $database);
+$connection = new mysqli($host, $username, $passowrd, $database); /* connection variable equals new mysqli containing $host, $username, $passowrd, $database variables */
 
 
 $title = filter_input(INPUT_POST, "title", FILTER_SANITIZE_STRING); /*title variable contains filter_input*/
   $post = filter_input(INPUT_POST, "post", FILTER_SANITIZE_STRING);  /*post variable contains filter_input*/
 
-   echo "<p>Title: $title</p>" /*echoing paragraph tag with Title:*/
-    echo "<p>Post: $post</p>" /*echoing paragraph tag with Post:*/
+   $query = $connection->query("INSERT INTO posts SET title = '$title', post = '$post'"); /*query variables equals connection making the query insert into posts and title variables*/
 
-    $connection->close();
+if($query) {
+  echo "<p> Succcessfully inserted post: $title/p>" /* meaning if you inserted your post it went successfully*/
+}
+else {
+	echo "<p>connection->error</p>"; /* the else is the errormeanign your connection has an error with your inserted post*/
+}
+
+    $connection->close(); /*closes the connection*/
