@@ -1,9 +1,7 @@
 <?php
-require_once(__DIR__ . "/../model/database.php");
-
-   $connection = new mysqli($host, $username, $password, $database); /*putting in database code*/
-
-   if($connection->connect_error) {
+    require_once(__DIR__ . "/../model/config.php");
+    $connection = new mysqli($host, $username, $passoword)
+    if($connection->connect_error) {
 
       die("<p>Error: " . $connection->connect_error . "</p>");
 
@@ -11,14 +9,14 @@ require_once(__DIR__ . "/../model/database.php");
 
     $exists = $connection->select_db($database); /* exists variable equals connection variable to select_db(database) */
 
-   if(!$exists) {
-   	 $query = $connection->query("CREATE DATABASE $database");
+    if(!$exists) {
+   	    $query = $connection->query("CREATE DATABASE $database");
 
-   	 if($query) {
-        echo "<p>successfully created database: " . $database ."</p>";   
-   	 }
+   	    if($query) {
+            echo "<p>successfully created database: " . $database ."</p>";   
+   	    }
    
-   }
+     }
 
     else {
     	echo "<p>Database already exists.</p>"; /*paragraph tags in echo */
@@ -37,4 +35,4 @@ require_once(__DIR__ . "/../model/database.php");
       echo "<p>$connection->error</p>";  /*paragraph tags in echo */
     }
    
-   $connection->close(); /* you dont need the ?> tag at the end*/
+    $connection->close(); /* you dont need the ?> tag at the end*/

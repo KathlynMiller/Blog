@@ -19,7 +19,7 @@ class database { /* we need functions in our class that store in variables*/
 
         if($this->connection->connect_error) {
 
-           die("<p>Error: " . $this->connection->connect_error . "</p>");
+           die("<p>Error: " . $this->connection->connect_error . "</p>"); /*paragraphing my connection*/
 
         }
     }
@@ -31,6 +31,12 @@ class database { /* we need functions in our class that store in variables*/
 
     }
     public function query($string) {   /*query function contains a string variable*/
+    	$this->openConnection(); /*opening my connection*/
 
+    	$query = $this->connection->query($string); /*query variable stores a connection containing a query with a string variable */
+    	$this->closeConnction();    /*closing connection in query function*/
+
+    	return $query;   /*returning my query */
+
+        }
     }
-}
