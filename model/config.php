@@ -1,5 +1,6 @@
 <?php
- 
+  require_once(__DIR__ . "/database.php");
+
   $path="/blog/"; /* path variable  contains blog folder*/
 
   $host = "localhost";

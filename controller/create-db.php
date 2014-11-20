@@ -1,26 +1,5 @@
 <?php
     require_once(__DIR__ . "/../model/config.php");
-    $connection = new mysqli($host, $username, $passoword)
-    if($connection->connect_error) {
-
-      die("<p>Error: " . $connection->connect_error . "</p>");
-
-    }
-
-    $exists = $connection->select_db($database); /* exists variable equals connection variable to select_db(database) */
-
-    if(!$exists) {
-   	    $query = $connection->query("CREATE DATABASE $database");
-
-   	    if($query) {
-            echo "<p>successfully created database: " . $database ."</p>";   
-   	    }
-   
-     }
-
-    else {
-    	echo "<p>Database already exists.</p>"; /*paragraph tags in echo */
-    }
 
     $query = $connection->query("CREATE TABLE posts(" /* creating table posts in query variable                                                                                                                      i*/
       . "id int(11) NOT NULL AUTO_INCREMENT," 
@@ -35,4 +14,4 @@
       echo "<p>$connection->error</p>";  /*paragraph tags in echo */
     }
    
-    $connection->close(); /* you dont need the ?> tag at the end*/
+    
