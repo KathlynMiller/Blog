@@ -7,5 +7,8 @@
   $username = "root";
   $password = "root";
   $database = "blog_db";
-
-  $connection = new database($host, $username, $password, $database);  /* connection variable equals new mysqli containing $host, $username, $passowrd, $database variables */
+  
+  if(!isset($_SESSION["connection"])) {
+       $connection = new database($host, $username, $password, $database);  /* connection variable equals new mysqli containing $host, $username, $passowrd, $database variables */
+       $_SESSION["connection"] = $connection; /*this makes the "Database already exists" on post.php disappear*/
+  }
