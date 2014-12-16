@@ -1,15 +1,10 @@
 <?php
- require_once(__DIR__ . "/../model/config.php");
+ require_once(__DIR__ . "/../model/config.php"); /*added config.php file*/
 ?>
 
-<h1>Register</h1> <!--Register heading for Login-->
+<h1>Login</h1>
 
- <form method="post" action="<?php echo $path . "controller/create-user.php"; ?>"> <!--added a method -->
-	<div>
-		<label for="email">Email: </label> <!-- label tag for email -->
-		<input type="text" name="email"/>  <!-- input tag for text and email -->
-	</div>
-
+<form method="post" action="<?php echo $path . "controller/login-user.php"?>">
 	 <div>
 	 	<label for="usernanme">Username: </label> <!-- label tag for username -->
 		<input type="text" name="username"/> <!-- input tag for text and username -->

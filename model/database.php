@@ -7,7 +7,7 @@ class database { /* we need functions in our class that store in variables*/
     private $database;
     public $error;
 
-    public function __construct( $host, $username, $password, $database) { /* the constructor is cotaining 4 variable from the database class*/
+    public function __construct($host, $username, $password, $database) { /* the constructor is cotaining 4 variable from the database class*/
       $this->host = $host;         /*they all are storing their own gobal variables*/
       $this->username = $username;
       $this->password = $password;
@@ -17,6 +17,7 @@ class database { /* we need functions in our class that store in variables*/
     
     if($this->connection->connect_error) {
       die("<p>Error: " . $this->connection->connect_error . "</p>");
+
     }
 
     $exists = $this->connection->select_db($database); /* exists variable equals connection variable to select_db(database) */

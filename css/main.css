@@ -1,6 +1,10 @@
 body {
-	background-color:pink;    /*backgrpund is pink for my blog*/
-}
+	padding-top:50px;
+	background:();
+
+	background-size:cover;
+
+}     
 
 @media screen and (min-width:1024px) {    /* media query min width on for ipad is 1024px*/
 	html{ background-color: purple; }     /*background color for ipad is purple */
